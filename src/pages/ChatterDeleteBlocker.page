@@ -1,0 +1,44 @@
+<apex:page >
+<!--
+<apex:includeScript value="{!URLFOR($Resource.videobox, 'video/js/mootools.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.videobox, 'video/js/swfobject.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.videobox, 'video/js/videobox.js')}"/>
+
+<apex:stylesheet value="{!URLFOR($Resource.videobox, 'video/css/videobox.css')}"/>
+-->
+
+<p>
+  <h1>Chatter Delete Blocker - <i>"Take control of feed deletions."</i></h1>
+</p><p>  
+  <h2>What is it?</h2>
+  </p><p>  
+This application allows management of Chatter Feed Post and Comment deletions. Once installed, by default only users with Modify All Data will be able to delete Feed Post and Comments.
+
+Included is a Custom Setting named Chatter Delete Settings which allows the organization's administrator to specify org-wide, profile, or user based settings.
+  <h3>How do I get started?</h3>
+  </p><p>  
+  As soon as you install Chatter Delete Blocker, it is in effect!  Without lifting a finger, all your organization's Feed Posts and Comments will no longer be able to be removed.
+  Only users with a Modify All Data profile will be able to remove Feed Posts and Comments.
+  </p><p>  
+  If you want to change any settings, go to Setup > Develop > Custom Settings and click Chatter Delete Settings.  Once you have clicked to Chatter Delete Settings, click Manage to add override rules.
+  </p><p>
+  You can add overrides for:
+  <ul>
+  <li>Individual Users</li>
+  <li>Specific Profiles</li>
+  <li>or the Entire Organization</li>
+  </ul>
+  </p><p>
+  <h3>How it works</h3>
+  </p><p>  
+  Apex Triggers have been added to Feed Post delete and Feed Comment delete.  These Apex Triggers will check if any rules have been set in the Chatter Delete Settings.  If they have, it will abide by the rule.  Otherwise, the default app setting will applied.  That is, only users with the a Modify All Data profile can delete Feed Posts and Comments.
+  </p><p>
+  If the Apex Trigger has deemed the delete attempt unsuccessful, an error message will appear saying "Your administrator has disabled feed post and comment deletions".
+  </p><p>
+  <h3>Who do I go to if I want more features, offer feedback etc?</h3>
+  </p><p>  
+  Chatter Delete Blocker was written by Marcus Ericsson. The best way to provide feedback is follow him on 
+  <a href="http://twitter.com/mericsson">Twitter</a>, and send comments there. Of course, the source is yours to do whatever
+  you like with it :)
+  </p>
+</apex:page>
